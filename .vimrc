@@ -89,6 +89,8 @@ Plug 'easymotion/vim-easymotion'
 "ack命令在vim中的快速检索
 Plug 'mileszs/ack.vim'
 
+Plug 'voldikss/vim-floaterm'
+
 " ------------------- 语言 -------------------
 Plug 'vim-scripts/L9'
 Plug 'mattn/emmet-vim'
@@ -136,6 +138,23 @@ nmap <C-u> :TagbarToggle<CR>
 
 " easymotion 把光标快速移动 到你的可视区域
 nmap ss <Plug>(easymotion-s2)
+
+
+" ------------------------------- Terminal --------------------------------
+" 终端模式下, 切换终端 
+tnoremap <silent> <C-n> <C-\><C-n>:FloatermNext<CR>
+" 新建terminal windows
+let g:floaterm_keymap_new = '<Leader>tw'
+" 切换terminal模式
+let g:floaterm_keymap_toggle = '<Leader>tt'
+let g:floaterm_wintype = 'float'
+let g:floaterm_position = 'center'
+" 终端宽(0,1)
+let g:floaterm_width = 0.6
+" 终端高(0,1)
+let g:floaterm_height = 0.4
+" 终端标题
+let g:floaterm_title = 'floaterm: $1/$2'
 
 " ------------------------------- 安装 --------------------------------
 " :PlugInstall
