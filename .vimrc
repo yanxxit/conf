@@ -68,8 +68,8 @@ Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim'
 
 " file tree
-Plug 'preservim/nerdtree'
-" Plug 'scrooloose/nerdtree'
+" https://github.com/preservim/nerdtree
+Plug 'scrooloose/nerdtree'
 
 " 
 Plug 'preservim/tagbar'
@@ -88,10 +88,6 @@ Plug 'luochen1990/rainbow'
 
 " editorconfig
 Plug 'editorconfig/editorconfig-vim'
-
-" vim-cheat-sheet 插件
-Plug 'dbeniamine/vim-cheat-sheet'
-" :CheatSheet
 
 " ------------------- search -------------------
 " git clone --depth 1 https://ghproxy.com/https://github.com/junegunn/fzf.git ~/.fzf
