@@ -3,7 +3,7 @@
 
 ### .vimrc 同步
 ```sh
-curl -fLo ~/.vim/vimrc https://ghproxy.com/https://raw.githubusercontent.com/yanxxit/conf/main/.vimrc
+curl -fLo ~/.vimrc https://ghproxy.com/https://raw.githubusercontent.com/yanxxit/conf/main/.vimrc
 ```
 
 ## vim-plug install

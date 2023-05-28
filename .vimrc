@@ -179,17 +179,8 @@ nmap ss <Plug>(easymotion-s2)
 " ------------------------------- 安装 --------------------------------
 " :PlugInstall
 " :PlugStatus
-" :PlugUpdate
-" :PlugDiff
-" :FloatermNew
-" 更换源后，需要先将之前的插件清理，在安装才可用
-" :PlugClean
 
-" 给出一个在线的配置
-" github.com/vim/config
 " 1. 安装vim
-" 2. curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://ghproxy.com/https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" 2. curl -fLo ./vim-plug.plug.vim --create-dirs https://ghproxy.com/https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" 2. curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://ghproxy.com/https://raw.githubusercontent.com/yanxxit/conf/main/vim-plug.install.vim
 " 3. 更换plug.vim  ==> 切换为kgithub.com  ==> vim-plug.plug.vim
-" 获取配置文件
-" 4. curl -fLo ~/.vimrc --create-dirs https://ghproxy.com/https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" 4. curl -fLo ~/.vimrc https://ghproxy.com/https://raw.githubusercontent.com/yanxxit/conf/main/.vimrc
