@@ -1,7 +1,13 @@
 " ------------------------------- 通用配置 --------------------------------
+" 显示行号
 set number
 " 设置相对的行号
 set relativenumber
+set ruler
+
+"设置不产生swp文件
+set nobackup
+set autochdir
 
 " 代码缩进
 " 设置编辑时制表符占用空格数
@@ -9,9 +15,17 @@ set tabstop=2
 " 设置格式化时制表符占用空格数
 set shiftwidth=2
 
+set expandtab
+set showmode
+
 " code scheme 
 syntax enable
 syntax on
+
+"文件编码模式指定utf
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
 
 " 开启文件类型侦测
 filetype on
@@ -21,7 +35,12 @@ filetype indent on
 filetype plugin on
 
 
+" 高亮显示搜索结果：
+" (启用该功能),nohlsearch(关闭该功能)
+set hlsearch 
+
 " 开启实时搜索功能
+" 设置当每键入一个字符时，就搜索
 set incsearch
 " 搜索时大小写不敏感
 set ignorecase
@@ -61,8 +80,6 @@ Plug 'vim-airline/vim-airline-themes'
 " 分割线
 Plug 'Yggdroot/indentLine'
 
-" 光标快速移动
-Plug 'easymotion/vim-easymotion'
 " 
 Plug 'preservim/tagbar'
 
@@ -71,28 +88,40 @@ Plug 'luochen1990/rainbow'
 " editorconfig
 Plug 'editorconfig/editorconfig-vim'
 
-
-" 此处为将fzf安装到 ~/.fzf 目录，并执行 ./install --all 命令
-" git clone --depth 1 https://ghproxy.com/https://github.com/junegunn/fzf.git ~/.fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
-" 已安装后不需要后面的
-" Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
-
 " vim-cheat-sheet 插件
 Plug 'dbeniamine/vim-cheat-sheet'
 " :CheatSheet
 
-" 语言
+" ------------------- search -------------------
+" git clone --depth 1 https://ghproxy.com/https://github.com/junegunn/fzf.git ~/.fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+" Plug 'junegunn/fzf' " 已安装后不需要后面的
+Plug 'junegunn/fzf.vim'
+Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
+
+
+" 光标快速移动
+Plug 'easymotion/vim-easymotion'
+
+"ack命令在vim中的快速检索
+Plug 'mileszs/ack.vim'
+
+" ------------------- 语言 -------------------
 Plug 'vim-scripts/L9'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 " Plug 'fatih/vim-go'
+
+" html + js + node
 Plug 'othree/html5.vim'
 Plug 'moll/vim-node'
+Plug 'isRuslan/vim-es6'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+
+" python
 Plug 'hdima/python-syntax'
 
 call plug#end()
@@ -111,6 +140,7 @@ let g:tokyonight_transparent_background = 1
 " <C-n> ==> control + n
 " silent
 
+" ------------------------------- 目录树 --------------------------------
 " 树形结构
 " noremap <leader>t:NERDTreeToggle<CR>
 " noremap <leader>f:NERDTreeFind<CR>
@@ -123,6 +153,7 @@ noremap <c-f> :NERDTreeFind<CR>
 " control + n
 nnoremap <C-n> :NERDTree<CR>
 
+" ------------------------------- 快速搜索fzf --------------------------------
 " fzf 
 " 按 control + p 就可以快速搜索
 noremap <c-p> :Files<CR>
