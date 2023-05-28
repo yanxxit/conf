@@ -161,7 +161,7 @@ noremap <c-g> :Ag<CR>
 nnoremap <Leader>fu :FzfFunky<Cr>
 " 方法罗列搜索
 " tracyone/fzf-funky
-nnoremap <c-fu>:FzfFunky<Cr>
+" nnoremap <c-fu>:FzfFunky<Cr>
 
 
 " tagbar
