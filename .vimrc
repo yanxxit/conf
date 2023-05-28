@@ -1,10 +1,45 @@
-" 通用配置
+" ------------------------------- 通用配置 --------------------------------
 set number
 " 设置相对的行号
 set relativenumber
 
+" 代码缩进
+" 设置编辑时制表符占用空格数
+set tabstop=2
+" 设置格式化时制表符占用空格数
+set shiftwidth=2
 
-" 插件
+" code scheme 
+syntax enable
+syntax on
+
+" 开启文件类型侦测
+filetype on
+" 自适应不同语言的智能缩进
+filetype indent on
+" 根据侦测到的不同类型加载对应的插件
+filetype plugin on
+
+
+" 开启实时搜索功能
+set incsearch
+" 搜索时大小写不敏感
+set ignorecase
+" 关闭兼容模式
+set nocompatible
+" vim 自身命令行模式智能补全
+set wildmenu
+
+set t_Co=256        "开启256色支持
+set cmdheight=2     "设置命令行高度
+
+" 全屏开/关快捷键
+map <silent> <F11> :call ToggleFullscreen()<CR>
+" 启动 vim 时自动全屏
+" autocmd VimEnter * call ToggleFullscreen()
+
+
+" ------------------------------- 插件 --------------------------------
 call plug#begin('~/.vim/plugged')
 
 " 启动 辅助功能
@@ -62,7 +97,7 @@ Plug 'hdima/python-syntax'
 
 call plug#end()
 
-" 设置主题
+" ------------------------------- 设置主题 --------------------------------
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 
@@ -74,6 +109,7 @@ let g:tokyonight_transparent_background = 1
 
 " <leader> ==> \
 " <C-n> ==> control + n
+" silent
 
 " 树形结构
 " noremap <leader>t:NERDTreeToggle<CR>
@@ -108,7 +144,7 @@ nmap <C-u> :TagbarToggle<CR>
 " easymotion 该插件是让你可以在vim 中 把光标快速移动 到你的可视区域
 nmap ss <Plug>(easymotion-s2)
 
-
+" ------------------------------- 安装 --------------------------------
 " :PlugInstall
 " :PlugStatus
 " :PlugUpdate
