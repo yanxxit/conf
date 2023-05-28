@@ -142,6 +142,7 @@ nmap ss <Plug>(easymotion-s2)
 
 " ------------------------------- Terminal --------------------------------
 " 终端模式下, 切换终端 
+" ctrl + n
 tnoremap <silent> <C-n> <C-\><C-n>:FloatermNext<CR>
 " 新建terminal windows
 let g:floaterm_keymap_new = '<Leader>tw'
