@@ -1,8 +1,7 @@
 " ------------------------------- 通用配置 --------------------------------
-" 显示行号
-set number
-" 设置相对的行号
-set relativenumber
+
+set number " 显示行号
+set relativenumber " 设置相对的行号
 set ruler
 
 "设置不产生swp文件
@@ -40,10 +39,9 @@ filetype plugin on
 set hlsearch 
 
 " 开启实时搜索功能
-" 设置当每键入一个字符时，就搜索
-set incsearch
-" 搜索时大小写不敏感
-set ignorecase
+set incsearch " 设置当每键入一个字符时，就搜索
+set ignorecase " 搜索时大小写不敏感
+
 " 关闭兼容模式
 set nocompatible
 " vim 自身命令行模式智能补全
@@ -51,12 +49,6 @@ set wildmenu
 
 set t_Co=256        "开启256色支持
 set cmdheight=2     "设置命令行高度
-
-" 全屏开/关快捷键
-map <silent> <F11> :call ToggleFullscreen()<CR>
-" 启动 vim 时自动全屏
-" autocmd VimEnter * call ToggleFullscreen()
-
 
 " ------------------------------- 插件 --------------------------------
 call plug#begin('~/.vim/plugged')
@@ -151,21 +143,15 @@ noremap <c-f> :NERDTreeFind<CR>
 nnoremap <C-n> :NERDTree<CR>
 
 " ------------------------------- 快速搜索fzf --------------------------------
-" fzf 
 " 按 control + p 就可以快速搜索
 noremap <c-p> :Files<CR>
 " 按 control + g 可以快速全局模糊搜索（上面是只搜文件）
 noremap <c-g> :Ag<CR>
 
-" \ + f + u
+" \ + f + u 方法罗列搜索 tracyone/fzf-funky
 nnoremap <Leader>fu :FzfFunky<Cr>
-" 方法罗列搜索
-" tracyone/fzf-funky
-" nnoremap <c-fu>:FzfFunky<Cr>
 
-
-" tagbar
-" 设置 Control + u 作为映射快捷键
+" tagbar Control + u
 nmap <C-u> :TagbarToggle<CR>
 
 
