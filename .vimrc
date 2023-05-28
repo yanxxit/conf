@@ -26,25 +26,19 @@ set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
 
-" 开启文件类型侦测
-filetype on
-" 自适应不同语言的智能缩进
-filetype indent on
-" 根据侦测到的不同类型加载对应的插件
-filetype plugin on
 
+filetype on " 开启文件类型侦测
+filetype indent on " 自适应不同语言的智能缩进
+filetype plugin on " 根据侦测到的不同类型加载对应的插件
 
-" 高亮显示搜索结果：
-" (启用该功能),nohlsearch(关闭该功能)
-set hlsearch 
-
-" 开启实时搜索功能
-set incsearch " 设置当每键入一个字符时，就搜索
+" 搜索配置
+set hlsearch " 高亮显示搜索结果：
+set incsearch " 开启实时搜索功能，设置当每键入一个字符时，就搜索
 set ignorecase " 搜索时大小写不敏感
 
 " 关闭兼容模式
 set nocompatible
-" vim 自身命令行模式智能补全
+" vim 自身命令行模式智能补全 :set nu ==> set number
 set wildmenu
 
 set t_Co=256        "开启256色支持
@@ -122,25 +116,11 @@ let g:tokyonight_enable_italic = 1
 colorscheme tokyonight
 
 let g:tokyonight_transparent_background = 1 
-
-" 设置文件
-
-" <leader> ==> \
-" <C-n> ==> control + n
-" silent
-
 " ------------------------------- 目录树 --------------------------------
-" 树形结构
-" noremap <leader>t:NERDTreeToggle<CR>
-" noremap <leader>f:NERDTreeFind<CR>
-
-" 目录树
-" control + t
+" control + t 打开或者关闭
 noremap <c-t> :NERDTreeToggle<CR>
-" control + f
+" control + f 订位所在位置
 noremap <c-f> :NERDTreeFind<CR>
-" control + n
-nnoremap <C-n> :NERDTree<CR>
 
 " ------------------------------- 快速搜索fzf --------------------------------
 " 按 control + p 就可以快速搜索
@@ -154,8 +134,7 @@ nnoremap <Leader>fu :FzfFunky<Cr>
 " tagbar Control + u
 nmap <C-u> :TagbarToggle<CR>
 
-
-" easymotion 该插件是让你可以在vim 中 把光标快速移动 到你的可视区域
+" easymotion 把光标快速移动 到你的可视区域
 nmap ss <Plug>(easymotion-s2)
 
 " ------------------------------- 安装 --------------------------------
