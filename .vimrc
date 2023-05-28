@@ -95,8 +95,8 @@ Plug 'dbeniamine/vim-cheat-sheet'
 
 " ------------------- search -------------------
 " git clone --depth 1 https://ghproxy.com/https://github.com/junegunn/fzf.git ~/.fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
-" Plug 'junegunn/fzf' " 已安装后不需要后面的
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf' " 已安装后不需要后面的
 Plug 'junegunn/fzf.vim'
 Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
 
