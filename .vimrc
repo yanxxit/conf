@@ -69,6 +69,10 @@ Plug 'neoclide/coc.nvim'
 
 " file tree
 Plug 'preservim/nerdtree'
+" Plug 'scrooloose/nerdtree'
+
+" 
+Plug 'preservim/tagbar'
 
 " theme
 Plug 'ghifarit53/tokyonight-vim'
@@ -79,9 +83,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 " 分割线
 Plug 'Yggdroot/indentLine'
-
-" 
-Plug 'preservim/tagbar'
 
 Plug 'luochen1990/rainbow'
 
