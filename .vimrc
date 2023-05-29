@@ -4,6 +4,9 @@ set number " 显示行号
 set relativenumber " 设置相对的行号
 set ruler
 
+" https://blog.csdn.net/zf766045962/article/details/90052374
+set backspace=2
+
 "设置不产生swp文件
 set nobackup
 set autochdir
@@ -89,6 +92,7 @@ Plug 'easymotion/vim-easymotion'
 "ack命令在vim中的快速检索
 Plug 'mileszs/ack.vim'
 
+" terminal
 Plug 'voldikss/vim-floaterm'
 
 " ------------------- 语言 -------------------
