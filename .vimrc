@@ -39,10 +39,11 @@ set hlsearch " 高亮显示搜索结果：
 set incsearch " 开启实时搜索功能，设置当每键入一个字符时，就搜索
 set ignorecase " 搜索时大小写不敏感
 
-" 关闭兼容模式
-set nocompatible
+set nocompatible " 关闭兼容模式，不兼容vi，这样可以发挥vim的很多强大功能。
 " vim 自身命令行模式智能补全 :set nu ==> set number
 set wildmenu
+
+" set mouse="" " 禁鼠标，这个不禁vim右键会出一个弹窗，挺难受的。
 
 set t_Co=256        "开启256色支持
 set cmdheight=2     "设置命令行高度
@@ -54,7 +55,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 
 " 提示
-Plug 'neoclide/coc.nvim'
+" Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " file tree
 " https://github.com/preservim/nerdtree
@@ -143,6 +145,24 @@ nmap <C-u> :TagbarToggle<CR>
 " easymotion 把光标快速移动 到你的可视区域
 nmap ss <Plug>(easymotion-s2)
 
+
+" ------------------------------- coc --------------------------------
+" # ~/.config/nvim/init.vim
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " ------------------------------- Terminal --------------------------------
 " 终端模式下, 切换终端 
