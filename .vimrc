@@ -4,6 +4,8 @@ set number " 显示行号
 set relativenumber " 设置相对的行号
 set ruler
 
+set autoread " 自动加载
+
 " https://blog.csdn.net/zf766045962/article/details/90052374
 set backspace=2
 
