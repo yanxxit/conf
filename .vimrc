@@ -117,6 +117,9 @@ Plug 'mxw/vim-jsx'
 " python
 Plug 'hdima/python-syntax'
 
+" 格式化
+Plug 'Chiel92/vim-autoformat'
+
 call plug#end()
 
 " ------------------------------- 设置主题 --------------------------------
@@ -183,6 +186,17 @@ let g:floaterm_height = 0.4
 " 终端标题
 let g:floaterm_title = 'floaterm: $1/$2'
 
+" ------------------------------- vim-autoformat --------------------------------
+"F4自动格式化代码
+noremap <F4> :Autoformat<CR>
+let g:autoformat_verbosemode=1
+
+" 保存时格式化
+" cnpm -g install js-beautify
+au BufWrite *.js :Autoformat
+au BufWrite *.sh :Autoformat
+au BufWrite *.html :Autoformat
+au BufWrite *.css :Autoformat
 " ------------------------------- 安装 --------------------------------
 " :PlugInstall
 " :PlugStatus
