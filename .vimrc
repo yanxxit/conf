@@ -73,6 +73,8 @@ Plug 'ghifarit53/tokyonight-vim'
 " 底部栏
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" 背景色
+Plug 'altercation/vim-colors-solarized'
 
 " 分割线
 Plug 'Yggdroot/indentLine'
@@ -120,6 +122,9 @@ Plug 'hdima/python-syntax'
 " 格式化
 Plug 'Chiel92/vim-autoformat'
 
+"括号自动匹配
+Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
 
 " ------------------------------- 设置主题 --------------------------------
@@ -129,6 +134,22 @@ let g:tokyonight_enable_italic = 1
 colorscheme tokyonight
 
 let g:tokyonight_transparent_background = 1 
+" ------------------------------- vim-airline --------------------------------
+set laststatus=2  "永远显示状态栏
+let g:airline_powerline_fonts = 1  " 支持 powerline 字体
+let g:airline#extensions#tabline#enabled = 1 " 显示窗口tab和buffer
+"let g:airline_theme='moloai'  " murmur配色不错
+
+if !exists('g:airline_symbols')
+let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '▶'
+let g:airline_left_alt_sep = '❯'
+let g:airline_right_sep = '◀'
+let g:airline_right_alt_sep = '❮'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+
 " ------------------------------- 目录树 --------------------------------
 " control + t 打开或者关闭
 noremap <c-t> :NERDTreeToggle<CR>
