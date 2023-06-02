@@ -60,6 +60,8 @@ Plug 'editorconfig/editorconfig-vim'
 " 注释
 Plug 'scrooloose/nerdcommenter'
 
+Plug 'garbas/vim-snipmate'
+
 " ------------------- 语言 -------------------
 Plug 'vim-scripts/L9'
 Plug 'mattn/emmet-vim'
