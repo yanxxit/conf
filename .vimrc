@@ -69,7 +69,8 @@ Plug 'othree/html5.vim'
 Plug 'moll/vim-node'            " node.js
 Plug 'isRuslan/vim-es6'
 Plug 'pangloss/vim-javascript'
-Plug 'vim-jsbeautify'
+" format
+Plug 'maksimr/vim-jsbeautify'
 
 " python
 Plug 'hdima/python-syntax'
