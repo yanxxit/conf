@@ -56,24 +56,28 @@ Plug 'jiangmiao/auto-pairs'
 " editorconfig
 Plug 'editorconfig/editorconfig-vim'
 
-" 格式化
-Plug 'Chiel92/vim-autoformat'
+
+" 注释
+Plug 'scrooloose/nerdcommenter'
 
 " ------------------- 语言 -------------------
 Plug 'vim-scripts/L9'
 Plug 'mattn/emmet-vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'godlygeek/tabular'
-" Plug 'fatih/vim-go'
 
-" html + js + node
 Plug 'othree/html5.vim'
-Plug 'moll/vim-node'
+
+Plug 'moll/vim-node'            " node.js
 Plug 'isRuslan/vim-es6'
 Plug 'pangloss/vim-javascript'
+Plug 'vim-jsbeautify'
 
 " python
 Plug 'hdima/python-syntax'
+" golang
+" Plug 'fatih/vim-go'
+
+" shell
+Plug 'shougo/vimshell.vim'
 
 
 Plug 'plasticboy/vim-markdown'
@@ -160,8 +164,8 @@ let g:airline_symbols.branch = '⎇'
 " ------------------------------- 目录树 --------------------------------
 " control + t 打开或者关闭
 noremap <c-t> :NERDTreeToggle<CR>
-" control + f 订位所在位置
-noremap <c-f> :NERDTreeFind<CR>
+" control + l 订位所在位置location
+noremap <c-l> :NERDTreeFind<CR>
 
 " ------------------------------- 快速搜索fzf --------------------------------
 " 按 control + p 就可以快速搜索
@@ -214,17 +218,10 @@ let g:floaterm_height = 0.4
 " 终端标题
 let g:floaterm_title = 'floaterm: $1/$2'
 
-" ------------------------------- vim-autoformat --------------------------------
-"F4自动格式化代码
-noremap <F4> :Autoformat<CR>
-let g:autoformat_verbosemode=1
+" ------------------------------- vim-jsbeautify --------------------------------
+" ctrl + f: format
+map <c-f> :call JsBeautify()<cr>
 
-" 保存时格式化
-" cnpm -g install js-beautify
-au BufWrite *.js :Autoformat
-au BufWrite *.sh :Autoformat
-au BufWrite *.html :Autoformat
-au BufWrite *.css :Autoformat
 " ------------------------------- 安装 --------------------------------
 " :PlugInstall
 " :PlugStatus
