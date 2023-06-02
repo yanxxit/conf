@@ -1,3 +1,85 @@
+" ------------------------------- 插件 --------------------------------
+call plug#begin('~/.vim/plugged')
+" ------ 美化 ------
+" theme
+Plug 'ghifarit53/tokyonight-vim'
+
+" 底部栏
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" 背景色
+Plug 'altercation/vim-colors-solarized'
+
+
+" ------ 文件 ------
+" 启动 辅助功能
+Plug 'mhinz/vim-startify'
+
+" file tree
+" https://github.com/preservim/nerdtree
+Plug 'scrooloose/nerdtree'
+
+" ------------------- search -------------------
+" git clone --depth 1 https://ghproxy.com/https://github.com/junegunn/fzf.git ~/.fzf
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf' " 已安装后不需要后面的
+Plug 'junegunn/fzf.vim'
+Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
+
+" ack命令在vim中的快速检索
+Plug 'mileszs/ack.vim'
+
+" 光标快速移动
+Plug 'easymotion/vim-easymotion'
+
+" terminal
+Plug 'voldikss/vim-floaterm'
+
+" ---- code 编码 ----
+" 函数列表
+Plug 'preservim/tagbar'
+
+" 对齐问题
+Plug 'godlygeek/tabular'
+
+" Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" 分割线
+Plug 'Yggdroot/indentLine'
+" 代码彩虹括号
+Plug 'luochen1990/rainbow'
+
+" 括号自动补全插件
+Plug 'jiangmiao/auto-pairs'
+
+" editorconfig
+Plug 'editorconfig/editorconfig-vim'
+
+" 格式化
+Plug 'Chiel92/vim-autoformat'
+
+" ------------------- 语言 -------------------
+Plug 'vim-scripts/L9'
+Plug 'mattn/emmet-vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'godlygeek/tabular'
+" Plug 'fatih/vim-go'
+
+" html + js + node
+Plug 'othree/html5.vim'
+Plug 'moll/vim-node'
+Plug 'isRuslan/vim-es6'
+Plug 'pangloss/vim-javascript'
+
+" python
+Plug 'hdima/python-syntax'
+
+
+Plug 'plasticboy/vim-markdown'
+
+call plug#end()
+
 " ------------------------------- 通用配置 --------------------------------
 
 set number " 显示行号
@@ -50,82 +132,7 @@ set wildmenu
 set t_Co=256        "开启256色支持
 set cmdheight=2     "设置命令行高度
 
-" ------------------------------- 插件 --------------------------------
-call plug#begin('~/.vim/plugged')
 
-" 启动 辅助功能
-Plug 'mhinz/vim-startify'
-
-" 提示
-" Plug 'neoclide/coc.nvim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" file tree
-" https://github.com/preservim/nerdtree
-Plug 'scrooloose/nerdtree'
-
-" 
-Plug 'preservim/tagbar'
-
-" theme
-Plug 'ghifarit53/tokyonight-vim'
-
-" 底部栏
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" 背景色
-Plug 'altercation/vim-colors-solarized'
-
-" 分割线
-Plug 'Yggdroot/indentLine'
-
-Plug 'luochen1990/rainbow'
-
-" editorconfig
-Plug 'editorconfig/editorconfig-vim'
-
-" ------------------- search -------------------
-" git clone --depth 1 https://ghproxy.com/https://github.com/junegunn/fzf.git ~/.fzf
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
-Plug 'junegunn/fzf' " 已安装后不需要后面的
-Plug 'junegunn/fzf.vim'
-Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
-
-
-" 光标快速移动
-Plug 'easymotion/vim-easymotion'
-
-"ack命令在vim中的快速检索
-Plug 'mileszs/ack.vim'
-
-" terminal
-Plug 'voldikss/vim-floaterm'
-
-" ------------------- 语言 -------------------
-Plug 'vim-scripts/L9'
-Plug 'mattn/emmet-vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'godlygeek/tabular'
-" Plug 'fatih/vim-go'
-
-" html + js + node
-Plug 'othree/html5.vim'
-Plug 'moll/vim-node'
-Plug 'isRuslan/vim-es6'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-
-
-" python
-Plug 'hdima/python-syntax'
-
-" 格式化
-Plug 'Chiel92/vim-autoformat'
-
-"括号自动匹配
-Plug 'jiangmiao/auto-pairs'
-
-call plug#end()
 
 " ------------------------------- 设置主题 --------------------------------
 let g:tokyonight_style = 'night' " available: night, storm
